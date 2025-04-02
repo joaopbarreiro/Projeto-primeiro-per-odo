@@ -1,0 +1,41 @@
+programa { 
+funcao inicio() { 
+cadeia  clientes, mac  
+cadeia vetorClientes[10]={"leo","joao","gabriel","giulia","iago","thiago","samuel","ana","nivaldo","amanda"}
+cadeia vetorMac[10]={"36:A1:41","45:22:A8","BC:A1:00","16:AA:48","CC:D2:48","1C:AA:12","12:F1:E1","49:A2:D8","DC:11:00","AA:C3:23"}
+inteiro buscaLogin=0
+inteiro buscaMac=0  
+
+enquanto(buscaLogin!=1){ 
+  escreva("Digite o login do cliente:\n") 
+  leia(clientes)  
+  para(inteiro i=0 ;i<10; i++){  
+    se(clientes == vetorClientes[i]){ 
+    buscaLogin++ 
+  } 
+
+ } 
+  se(buscaLogin == 1) 
+    escreva ("cliente encontrado!\n\n") 
+  senao  
+    escreva ("cliente nao encontrado!\nDigite o login novamente\n") 
+}
+
+  
+enquanto(buscaMac!=1){ 
+  escreva("Digite o MAC do cliente:\n")
+  leia(mac)  
+  para(inteiro i=0 ;i<10; i++){  
+    se(mac == vetorMac[i]){ buscaMac++
+  }
+}
+
+se(buscaMac == 1) 
+  escreva ("MAC encontrado!\n\n")
+senao  
+  escreva ("\nMAC nao encontrado!\nDigite o MAC novamente\n\n") 
+} 
+
+escreva("\n\nMAC VINCULADO AO CLIENTE COM SUCESSO!!\n\nMAC "+ mac+" vinculado ao cliente "+ clientes+"\n\n")  
+}
+}
